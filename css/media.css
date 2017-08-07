@@ -1,0 +1,140 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.sell_right .button {
+margin: 10px auto;
+float: none;
+max-width: 145px;
+}
+.sell_descr {
+text-align: center;
+}
+.maian_mnu ul {
+background-color: #546E7A;
+display: none;
+position: absolute;
+width: 100%;
+}
+.maian_mnu ul li {
+display: block;
+}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.top_links {
+background-color: #585d61;
+display: none;
+margin-top: 15px;
+padding: 14px;
+position: absolute;
+vertical-align: middle;
+width: 100%;
+}
+
+.menu ul {top:37px;}
+.menu li a{font-size:12px; padding:8px;}
+
+.menu{display:none;}
+.mobile-menu{display:block;margin-top:0;}
+nav{margin:0; background:none;}
+
+.menu li{display:block; margin:0;}
+
+.menu li a {
+	background:#ffffff;
+	color:#797979;
+	border-top:1px solid #e0e0e0;
+	border-left:3px solid #ffffff;
+}
+
+.menu li a:hover, .menu li:hover > a{
+	background:#f0f0f0;
+	color:#797979;
+	border-left:3px solid #9CA3DA;
+}
+
+.menu ul {
+	display:block;
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+.menu ul ul {left:0;}
+
+.control-label {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.top_header .container {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.da-slide h2{
+	font-size: 2.000em;
+}
+
+.blog_item_main .foto {
+	text-align: center;
+	margin: 0 auto 30px;
+	float: none;
+	width: 60%;
+	height: auto;
+	}
+
+
+}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.top_links {
+		display: inline-block !important;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.maian_mnu ul {
+		display: block !important;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

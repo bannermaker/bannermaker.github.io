@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+    body {
+          margin: 0;
+          padding: 0;
+        }
+    .wrapper {
+          background: url(tnbg.jpg) no-repeat left top;
+          width: 1148px;
+          height: 240px;
+          margin: 0 auto;
+          text-align: center;
+          position: relative;
+        }
+    div#video_player_box {
+            width: 480px;
+            margin: 0px auto;
+            position: relative;
+        }
+    div#video_controls_bar {
+            width: 480px;
+            height: 240px;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    button {
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    #playpausebtn {
+        width: 40px;
+        height: 40px;
+        margin: 100px auto;
+        opacity: 0;
+        transition: opacity .2s ease;
+    }
+    #playpausebtn:hover {
+        width: 40px;
+        height: 40px;
+        margin: 100px auto;
+        opacity: .7;
+    }
+    #mutebtn {
+        width: 22px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        opacity: .7;
+    }
+</style>
+
+<script>
+var vid, playbtn, mutebtn;
+
+function intializePlayer(){
+    
+	vid = document.getElementById("my_video");
+	playbtn = document.getElementById("playpausebtn");
+	mutebtn = document.getElementById("mutebtn");
+    
+	playbtn.addEventListener("click", playPause, false);
+	mutebtn.addEventListener("click", vidmute, false);
+    
+}
+
+window.onload = intializePlayer;
+
+function playPause(){
+	if(vid.paused){
+		vid.play();
+		playbtn.innerHTML = "<img src='pause.png'>";
+	} else {
+		vid.pause();
+		playbtn.innerHTML = "<img src='play.png'>";
+	}
+}
+
+function vidmute(){
+	if(vid.muted){
+		vid.muted = false;
+		mutebtn.innerHTML = "<img src='mute.png'>";
+	} else {
+		vid.muted = true;
+		mutebtn.innerHTML = "<img src='speaker.png'>";
+	}
+}
+
+</script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div id="video_player_box">
+        <video id="my_video" width="auto" autoplay muted loop height="240"><source src="tulanews.mp4"></video>
+        <div id="video_controls_bar">
+            <button id="playpausebtn"><img src="pause.png" alt=""></button>
+            <button id="mutebtn"><img src="speaker.png" alt=""></button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
